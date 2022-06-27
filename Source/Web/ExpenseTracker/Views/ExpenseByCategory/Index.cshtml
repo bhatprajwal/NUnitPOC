@@ -1,0 +1,28 @@
+﻿@using ExpenseTracker.Dto
+@model IEnumerable<ExpenseByCategory>
+@{
+    ViewData["Title"] = "Category";
+}
+
+<div class="text-center">
+    <h2 class="display-4">Spendings By Category</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Year</td>
+                <td>Category</td>
+                <td>Expense</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in @Model)
+            {
+                <tr>
+                    <td>@item.Year</td>
+                    <td>@item.Category</td>
+                    <td>@item.Total</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
